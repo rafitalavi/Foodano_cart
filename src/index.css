@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.book-card img {
+  width: 100%;
+}
+
+.book-details {
+  padding: 20px;
+}
+
+.wishlist {
+  padding: 20px;
+}
