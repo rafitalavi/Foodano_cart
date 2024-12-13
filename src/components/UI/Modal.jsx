@@ -2,7 +2,7 @@ import { createPortal } from "react-dom";
 import { useRef, useEffect, useContext } from "react";
 import UserProgressContext from "../../store/UserProgressContext";
 
-export default function Modal({ children, open, className = "" }) {
+export default function Modal({ children, open, className = "",onClose }) {
   const dialog = useRef();
   const UserProgressContxt = useContext(UserProgressContext);
 
@@ -44,7 +44,7 @@ export default function Modal({ children, open, className = "" }) {
 
   console.log("Rendering modal to modal root.");
   return createPortal(
-    <dialog ref={dialog} className={`modal ${className}`}>
+    <dialog ref={dialog} className={`modal ${className}`} onClose={onClose}>
       {children}
     </dialog>,
     modalRoot

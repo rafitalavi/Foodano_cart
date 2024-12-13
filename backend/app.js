@@ -30,10 +30,11 @@ app.post('/orders', async (req, res) => {
   }
 
   if (
-    orderData.customer.email === null ||
-    !orderData.customer.email.includes('@') ||
     orderData.customer.name === null ||
     orderData.customer.name.trim() === '' ||
+    orderData.customer.email === null ||
+    !orderData.customer.email.includes('@') ||
+   
     orderData.customer.street === null ||
     orderData.customer.street.trim() === '' ||
     orderData.customer['postal-code'] === null ||
